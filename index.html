@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Distraction-Free Writing App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="top-controls">
+    <button id="font-size-toggle">
+      <span class="material-symbols-outlined">text_increase</span>
+    </button>
+    <button id="theme-toggle">
+      <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+    </button>
+    <button id="fullscreen-toggle">
+      <span class="material-symbols-outlined" id="fullscreen-icon">fullscreen</span>
+    </button>
+    <button id="background-toggle">
+      <span class="material-symbols-outlined">palette</span>
+    </button>
+    <button id="export-pdf">
+      <span class="material-symbols-outlined">download</span>
+    </button>
+  </div>
+
+  <main>
+    <div id="writer" contenteditable="true" placeholder="Start writing..."></div>
+  </main>
+
+  <button id="reset-button">
+    <span class="material-symbols-outlined">restart_alt</span>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+
+  <div id="bottom-fade"></div>
+</body>
+</html>
