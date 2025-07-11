@@ -8,7 +8,8 @@ const themeIcon = document.getElementById('theme-icon');
 const fullscreenIcon = document.getElementById('fullscreen-icon');
 
 // Font Size Toggle
-const fontSizes = [20, 24, 28, 32, 36];
+const isMobile = window.innerWidth < 768;
+const fontSizes = isMobile ? [14, 16, 18, 20, 22] : [20, 24, 28, 32, 36];
 let currentFontSizeIndex = 0;
 
 const savedSize = localStorage.getItem('writingAppFontSize');
