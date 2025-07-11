@@ -151,28 +151,35 @@
   }
   
   /* === Mobile and Tablet Responsiveness === */
-  @media (max-width: 768px) {
-  #top-controls {
-  flex-wrap: nowrap;
-  gap: 1.2rem;
-  padding: 0.6rem 1rem;
-  bottom: 1rem;
-  width: 90%;
-  }
+  @media (max-width: 480px) {
+    #top-controls {
+      width: calc(100% - 2rem);
+      left: 50%;
+      transform: translateX(-50%);
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 1.2rem; /* Increased gap between icons */
+      padding: 0.8rem 1.2rem;
+      height: 4.5rem; /* Increased height */
+    }
   
-  #top-controls button {
-  font-size: 1.2rem;
-  padding: 0.3rem;
-  }
+    #top-controls button {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.3rem;
+      font-size: 1.2rem;
+    }
   
-  .material-symbols-outlined {
-  font-size: 20px;
-  }
+    .material-symbols-outlined {
+      font-size: 28px; /* Increased icon size */
+    }
   
-  #writer {
-  padding: 4rem 6vw;
-  font-size: 18px;
-  }
+    #writer {
+      padding: 3rem 4vw;
+      font-size: 16px;
+    }
   }
   
   @media (max-width: 480px) {
