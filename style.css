@@ -39,22 +39,20 @@
   
   /* === Top Controls / Dock === */
   #top-controls {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 0.6rem 3rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  width: calc(100% - 2rem);
-  max-width: 600px;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 0.6rem 3rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    width: auto; /* 👈 Explicitly restore to auto */
+    max-width: 90vw; /* Optional: prevents super-wide dock on large screens */
   }
   
   #top-controls button {
@@ -179,14 +177,13 @@
   
   @media (max-width: 480px) {
     #top-controls {
+      width: calc(100% - 2rem); /* 👈 Mobile full width with side margins */
+      left: 50%;
+      transform: translateX(-50%);
       flex-wrap: nowrap;
       justify-content: space-between;
-      padding: 0.6rem 1rem;
       gap: 0.5rem;
-      width: 100%;
-      left: 0;
-      transform: none;
-      border-radius: 0;
+      padding: 0.6rem 1rem;
     }
   
     #top-controls button {
